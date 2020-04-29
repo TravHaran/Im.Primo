@@ -1,0 +1,6 @@
+framework module Pods_StandardCyborgTest {
+  umbrella header "Pods-StandardCyborgTest-umbrella.h"
+
+  export *
+  module * { export * }
+}

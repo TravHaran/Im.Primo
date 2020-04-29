@@ -1,0 +1,52 @@
+<!DOCTYPE FilterScript>
+<FilterScript>
+ <xmlfilter name="Screened Poisson Surface Reconstruction">
+  <xmlparam value="0" name="cgDepth"/>
+  <xmlparam value="false" name="confidence"/>
+  <xmlparam value="8" name="depth"/>
+  <xmlparam value="5" name="fullDepth"/>
+  <xmlparam value="8" name="iters"/>
+  <xmlparam value="4" name="pointWeight"/>
+  <xmlparam value="false" name="preClean"/>
+  <xmlparam value="1.5" name="samplesPerNode"/>
+  <xmlparam value="1.1" name="scale"/>
+  <xmlparam value="false" name="visibleLayer"/>
+ </xmlfilter>
+ <filter name="Delete Current Mesh"/>
+ <filter name="Transform: Align to Principal Axis">
+  <Param tooltip="If selected, only the vertices of the mesh are used to compute the Principal Axis. Mandatory for point clouds or for non water tight meshes" value="true" description="Use vertex" type="RichBool" name="pointsFlag"/>
+  <Param tooltip="The transformation is explicitly applied, and the vertex coordinates are actually changed" value="true" description="Freeze Matrix" type="RichBool" name="Freeze"/>
+  <Param tooltip="If selected the filter will be applied to all visible mesh layers" value="false" description="Apply to all visible Layers" type="RichBool" name="allLayers"/>
+ </filter>
+ <filter name="Transform: Rotate">
+  <Param tooltip="Choose a method" enum_cardinality="4" value="1" description="Rotation on:" type="RichEnum" enum_val0="X axis" enum_val1="Y axis" enum_val2="Z axis" enum_val3="custom axis" name="rotAxis"/>
+  <Param tooltip="Choose a method" enum_cardinality="3" value="0" description="Center of rotation:" type="RichEnum" enum_val0="origin" enum_val1="barycenter" enum_val2="custom point" name="rotCenter"/>
+  <Param tooltip="Angle of rotation (in &lt;b>degree&lt;/b>). If snapping is enable this vaule is rounded according to the snap value" value="270" description="Rotation Angle" min="-360" max="360" type="RichDynamicFloat" name="angle"/>
+  <Param tooltip="This rotation axis is used only if the 'custom axis' option is chosen." description="Custom axis" type="RichPoint3f" x="0" y="0" z="0" name="customAxis"/>
+  <Param tooltip="This rotation center is used only if the 'custom point' option is chosen." description="Custom center" type="RichPoint3f" x="0" y="0" z="0" name="customCenter"/>
+  <Param tooltip="If selected, before starting the filter will remove anyy unreference vertex (for which curvature values are not defined)" value="false" description="Snap angle" type="RichBool" name="snapFlag"/>
+  <Param tooltip="This value is used to snap the rotation angle (i.e. if the snapping value is 30, 227 becomes 210)." value="30" description="Snapping Value" type="RichFloat" name="snapAngle"/>
+  <Param tooltip="The transformation is explicitly applied, and the vertex coordinates are actually changed" value="true" description="Freeze Matrix" type="RichBool" name="Freeze"/>
+  <Param tooltip="If selected the filter will be applied to all visible mesh layers" value="false" description="Apply to all visible Layers" type="RichBool" name="allLayers"/>
+ </filter>
+ <filter name="Transform: Scale, Normalize">
+  <Param tooltip="Scaling" value="100" description="X Axis" type="RichFloat" name="axisX"/>
+  <Param tooltip="Scaling" value="1" description="Y Axis" type="RichFloat" name="axisY"/>
+  <Param tooltip="Scaling" value="1" description="Z Axis" type="RichFloat" name="axisZ"/>
+  <Param tooltip="If selected an uniform scaling (the same for all the three axis) is applied (the X axis value is used)" value="true" description="Uniform Scaling" type="RichBool" name="uniformFlag"/>
+  <Param tooltip="Choose a method" enum_cardinality="3" value="0" description="Center of scaling:" type="RichEnum" enum_val0="origin" enum_val1="barycenter" enum_val2="custom point" name="scaleCenter"/>
+  <Param tooltip="This scaling center is used only if the 'custom point' option is chosen." description="Custom center" type="RichPoint3f" x="0" y="0" z="0" name="customCenter"/>
+  <Param tooltip="If selected, the object is scaled to a box whose sides are at most 1 unit lenght" value="false" description="Scale to Unit bbox" type="RichBool" name="unitFlag"/>
+  <Param tooltip="The transformation is explicitly applied, and the vertex coordinates are actually changed" value="true" description="Freeze Matrix" type="RichBool" name="Freeze"/>
+  <Param tooltip="If selected the filter will be applied to all visible mesh layers" value="false" description="Apply to all visible Layers" type="RichBool" name="allLayers"/>
+ </filter>
+ <filter name="Transform: Translate, Center, set Origin">
+  <Param tooltip="[XYZ translation] adds X,Y and Z offset to Layer transformation, [Center on BBox] moves Layer Origin to the Bounding Box center, [Set new Origin] moves Layer Origin to a specific point" enum_cardinality="3" value="1" description="Transformation:" type="RichEnum" enum_val0="XYZ translation" enum_val1="Center on BBox" enum_val2="Set new Origin" name="traslMethod"/>
+  <Param tooltip="when using [XYZ translation], amount of translation along the X axis (in model units)" value="0" description="X Axis" min="-300.775" max="300.775" type="RichDynamicFloat" name="axisX"/>
+  <Param tooltip="when using [XYZ translation], amount of translation along the Y axis (in model units)" value="0" description="Y Axis" min="-300.775" max="300.775" type="RichDynamicFloat" name="axisY"/>
+  <Param tooltip="when using [XYZ translation], amount of translation along the Z axis (in model units)" value="0" description="Z Axis" min="-300.775" max="300.775" type="RichDynamicFloat" name="axisZ"/>
+  <Param tooltip="when using [Set new Origin], this is the location of the new Origin." description="New Origin:" type="RichPoint3f" x="0" y="0" z="0" name="newOrigin"/>
+  <Param tooltip="The transformation is explicitly applied, and the vertex coordinates are actually changed" value="true" description="Freeze Matrix" type="RichBool" name="Freeze"/>
+  <Param tooltip="If selected the filter will be applied to all visible mesh layers" value="false" description="Apply to all visible Layers" type="RichBool" name="allLayers"/>
+ </filter>
+</FilterScript>

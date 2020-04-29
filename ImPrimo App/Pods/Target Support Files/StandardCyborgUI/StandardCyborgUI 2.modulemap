@@ -1,0 +1,6 @@
+framework module StandardCyborgUI {
+  umbrella header "StandardCyborgUI-umbrella.h"
+
+  export *
+  module * { export * }
+}

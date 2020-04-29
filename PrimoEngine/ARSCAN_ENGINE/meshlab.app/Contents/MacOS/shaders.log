@@ -1,0 +1,18 @@
+VERTEX SHADER COMPILE INFO:
+
+
+
+FRAGMENT SHADER COMPILE INFO:
+
+ERROR: 0:51: '+' does not operate on 'float' and 'int'
+ERROR: 0:52: Left-hand-side of assignment must not be read-only
+ERROR: 0:53: '+' does not operate on 'float' and 'int'
+ERROR: 0:61: '+' does not operate on 'float' and 'int'
+ERROR: 0:62: Left-hand-side of assignment must not be read-only
+ERROR: 0:63: '+' does not operate on 'float' and 'int'
+ERROR: 0:71: '+' does not operate on 'float' and 'int'
+ERROR: 0:72: Left-hand-side of assignment must not be read-only
+ERROR: 0:73: '+' does not operate on 'float' and 'int'
+ERROR: 0:78: '<' does not operate on 'float' and 'int'
+
+

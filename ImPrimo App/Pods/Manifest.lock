@@ -1,0 +1,31 @@
+PODS:
+  - Alamofire (5.0.2)
+  - Moya (14.0.0):
+    - Moya/Core (= 14.0.0)
+  - Moya/Core (14.0.0):
+    - Alamofire (~> 5.0)
+  - StandardCyborgFusion (2.0.7)
+  - StandardCyborgUI (1.5.0):
+    - StandardCyborgFusion
+
+DEPENDENCIES:
+  - Moya
+  - StandardCyborgFusion
+  - StandardCyborgUI
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - Moya
+    - StandardCyborgFusion
+    - StandardCyborgUI
+
+SPEC CHECKSUMS:
+  Alamofire: 3ba7a4db18b4f62c4a1c0e1cb39d7f3d52e10ada
+  Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
+  StandardCyborgFusion: df7755dc6fb56d084e82a0bd5517ff0831b69ab1
+  StandardCyborgUI: 1e01f7af730e69af0d73e24c19cbc85347cc171b
+
+PODFILE CHECKSUM: 34055946729af98a1a8650be03c19b77a55aebc2
+
+COCOAPODS: 1.9.0

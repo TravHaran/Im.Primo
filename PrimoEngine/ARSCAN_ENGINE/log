@@ -1,0 +1,9 @@
+param = /var/folders/by/h3ml9b1x04v2nlvhd44zprq00000gn/T/tmp.GMFdGKrP/model.obj
+assimp export: select file format: 'obj' (Wavefront OBJ format)
+Launching asset import ...           OK
+Validating postprocessing flags ...  OK
+ERROR: Failed to load file: STL: file is empty. There are no facets defined
+Error: input file /var/folders/by/h3ml9b1x04v2nlvhd44zprq00000gn/T/tmp.GMFdGKrP/model.obj does not exist.
+Failed to open '/var/folders/by/h3ml9b1x04v2nlvhd44zprq00000gn/T/tmp.GMFdGKrP/model_orig.usdz' - Could not open layer
+sed: /var/folders/by/h3ml9b1x04v2nlvhd44zprq00000gn/T/tmp.GMFdGKrP/model.usda: No such file or directory
+sed: /var/folders/by/h3ml9b1x04v2nlvhd44zprq00000gn/T/tmp.GMFdGKrP/model.usda: No such file or directory

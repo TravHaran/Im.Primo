@@ -1,0 +1,9 @@
+platform :ios, '13.3'
+
+target 'StandardCyborgTest' do
+  use_frameworks!
+ 
+  pod 'StandardCyborgFusion'
+  pod 'StandardCyborgUI'
+  pod 'Moya'
+end
