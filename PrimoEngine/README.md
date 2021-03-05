@@ -5,6 +5,6 @@ Im.Primo allows users to scan objects with their phone and 3D Print it with the 
 
 Built using Python, Swift, Django, StandardCyborg API, & OctoPrint API
 
-Check it out
-  Youtube: https://www.youtube.com/watch?v=HLnXVU77FOM
-  DevPost:https://devpost.com/software/imprimo
+Check it out...
+Youtube: https://www.youtube.com/watch?v=HLnXVU77FOM
+DevPost:https://devpost.com/software/imprimo
